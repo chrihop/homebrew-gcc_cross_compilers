@@ -1,6 +1,6 @@
 require 'formula'
 
-class I586ElfGcc < Formula
+class I386ElfGcc < Formula
   homepage 'http://gcc.gnu.org'
   url "https://mirrors.tuna.tsinghua.edu.cn/gnu/gcc/gcc-6.2.0/gcc-6.2.0.tar.bz2"
   mirror "http://ftp.tsukuba.wide.ad.jp/software/gcc/releases/gcc-6.2.0/gcc-6.2.0.tar.bz2"
@@ -10,10 +10,10 @@ class I586ElfGcc < Formula
   depends_on "libmpc"
   depends_on "mpfr"
   depends_on "isl"
-  depends_on 'i586-elf-binutils'
+  depends_on 'i386-elf-binutils'
 
   def install
-    binutils = Formula.factory 'i586-elf-binutils'
+    binutils = Formula.factory 'i386-elf-binutils'
 
 
     ENV['CC'] = '/usr/local/opt/gcc/bin/gcc-6'

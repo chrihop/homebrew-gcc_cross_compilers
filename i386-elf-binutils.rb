@@ -1,6 +1,6 @@
 require 'formula'
 
-class I586ElfBinutils < Formula
+class I386ElfBinutils < Formula
   homepage 'http://gcc.gnu.org'
   url 'https://mirrors.tuna.tsinghua.edu.cn/gnu/binutils/binutils-2.27.tar.bz2'
   sha256 '369737ce51587f92466041a97ab7d2358c6d9e1b6490b3940eb09fb0a9a6ac88'

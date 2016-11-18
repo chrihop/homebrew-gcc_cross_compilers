@@ -1,12 +1,12 @@
 os: osx
 language: objective-c
 before_install:
-  - brew tap sevki/gcc_cross_compilers
+  - brew tap chrihop/gcc_cross_compilers
   - brew tap homebrew/dupes
 env:
   - ARCH=x86_64
   - ARCH=arm
-  - ARCH=i586
+  - ARCH=i386
 script:
   - sh test.sh
 branches:
@@ -14,7 +14,7 @@ branches:
     - master
 notifications:
   recipients:
-    - s@sevki.org
+    - chrihop@gmail.com
   email:
     on_success: always
     on_failure: always
