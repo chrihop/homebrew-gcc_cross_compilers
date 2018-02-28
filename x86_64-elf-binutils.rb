@@ -2,16 +2,16 @@ require 'formula'
 
 class X8664ElfBinutils < Formula
   homepage 'http://gcc.gnu.org'
-  url 'https://mirrors.tuna.tsinghua.edu.cn/gnu/binutils/binutils-2.29.tar.xz'
-  mirror 'http://ftp.gnu.org/gnu/binutils/binutils-2.29.tar.xz'
-  sha256 '0b871e271c4c620444f8264f72143b4d224aa305306d85dd77ab8dce785b1e85'
+  url 'https://mirrors.tuna.tsinghua.edu.cn/gnu/binutils/binutils-2.30.tar.xz'
+  mirror 'http://ftp.gnu.org/gnu/binutils/binutils-2.30.tar.xz'
+  sha256 '6e46b8aeae2f727a36f0bd9505e405768a72218f1796f0d09757d45209871ae6'
 
   depends_on 'gcc' => :build
   def install
-    ENV['CC'] = '/usr/local/opt/gcc/bin/gcc-6'
-    ENV['CXX'] = '/usr/local/opt/gcc/bin/g++-6'
-    ENV['CPP'] = '/usr/local/opt/gcc/bin/cpp-6'
-    ENV['LD'] = '/usr/local/opt/gcc/bin/gcc-6'
+    ENV['CC'] = '/usr/local/opt/gcc/bin/gcc-7'
+    ENV['CXX'] = '/usr/local/opt/gcc/bin/g++-7'
+    ENV['CPP'] = '/usr/local/opt/gcc/bin/cpp-7'
+    ENV['LD'] = '/usr/local/opt/gcc/bin/gcc-7'
 
     mkdir 'build' do
       system '../configure', '--disable-nls', '--target=x86_64-elf','--disable-werror',

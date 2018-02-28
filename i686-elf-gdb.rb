@@ -2,9 +2,9 @@ require 'formula'
 
 class I686ElfGdb < Formula
   homepage 'http://gcc.gnu.org'
-  url 'https://mirrors.tuna.tsinghua.edu.cn/gnu/gdb/gdb-8.0.tar.xz'
-  mirror 'http://ftp.gnu.org/gnu/gdb/gdb-8.0.tar.xz'
-  sha256 'f6a24ffe4917e67014ef9273eb8b547cb96a13e5ca74895b06d683b391f3f4ee'
+  url 'https://mirrors.tuna.tsinghua.edu.cn/gnu/gdb/gdb-8.1.tar.xz'
+  mirror 'http://ftp.gnu.org/gnu/gdb/gdb-8.1.tar.xz'
+  sha256 'af61a0263858e69c5dce51eab26662ff3d2ad9aa68da9583e8143b5426be4b34'
 
   depends_on 'i686-elf-binutils'
   depends_on 'i686-elf-gcc'

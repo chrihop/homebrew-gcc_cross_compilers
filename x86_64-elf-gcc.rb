@@ -2,9 +2,9 @@ require 'formula'
 
 class X8664ElfGcc < Formula
   homepage 'http://gcc.gnu.org'
-  url "https://mirrors.tuna.tsinghua.edu.cn/gnu/gcc/gcc-7.2.0/gcc-7.2.0.tar.xz"
-  mirror "http://mirrors-usa.go-parts.com/gcc/releases/gcc-7.2.0/gcc-7.2.0.tar.xz"
-  sha256 "1cf7adf8ff4b5aa49041c8734bbcf1ad18cc4c94d0029aae0f4e48841088479a"
+  url "https://mirrors.tuna.tsinghua.edu.cn/gnu/gcc/gcc-7.3.0/gcc-7.3.0.tar.xz"
+  mirror "http://mirrors-usa.go-parts.com/gcc/releases/gcc-7.3.0/gcc-7.3.0.tar.xz"
+  sha256 "832ca6ae04636adbb430e865a1451adf6979ab44ca1c8374f61fba65645ce15c"
 
   depends_on "gmp"
   depends_on "libmpc"
@@ -15,10 +15,10 @@ class X8664ElfGcc < Formula
   def install
     binutils = Formulary.factory 'x86_64-elf-binutils'
 
-    ENV['CC'] = '/usr/local/opt/gcc/bin/gcc-6'
-    ENV['CXX'] = '/usr/local/opt/gcc/bin/g++-6'
-    ENV['CPP'] = '/usr/local/opt/gcc/bin/cpp-6'
-    ENV['LD'] = '/usr/local/opt/gcc/bin/gcc-6'
+    ENV['CC'] = '/usr/local/opt/gcc/bin/gcc-7'
+    ENV['CXX'] = '/usr/local/opt/gcc/bin/g++-7'
+    ENV['CPP'] = '/usr/local/opt/gcc/bin/cpp-7'
+    ENV['LD'] = '/usr/local/opt/gcc/bin/gcc-7'
     ENV['PATH'] += ":#{binutils.prefix/"bin"}"
 
     mkdir 'build' do

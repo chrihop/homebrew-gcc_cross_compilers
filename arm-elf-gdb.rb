@@ -2,9 +2,9 @@ require 'formula'
 
 class ArmElfGdb < Formula
   homepage 'http://gcc.gnu.org'
-  url 'https://mirrors.tuna.tsinghua.edu.cn/gnu/gdb/gdb-7.12.tar.xz'
-  mirror 'http://ftp.gnu.org/gnu/gdb/gdb-7.12.tar.xz'
-  sha256 '834ff3c5948b30718343ea57b11cbc3235d7995c6a4f3a5cecec8c8114164f94'
+  url 'https://mirrors.tuna.tsinghua.edu.cn/gnu/gdb/gdb-8.1.tar.xz'
+  mirror 'http://ftp.gnu.org/gnu/gdb/gdb-8.1.tar.xz'
+  sha256 'af61a0263858e69c5dce51eab26662ff3d2ad9aa68da9583e8143b5426be4b34'
 
   depends_on 'arm-elf-binutils'
   depends_on 'arm-elf-gcc'

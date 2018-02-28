@@ -2,9 +2,9 @@ require 'formula'
 
 class ArmElfGcc < Formula
   homepage 'http://gcc.gnu.org'
-  url "https://mirrors.tuna.tsinghua.edu.cn/gnu/gcc/gcc-6.2.0/gcc-6.2.0.tar.bz2"
-  mirror "http://ftp.tsukuba.wide.ad.jp/software/gcc/releases/gcc-6.2.0/gcc-6.2.0.tar.bz2"
-  sha256 "9944589fc722d3e66308c0ce5257788ebd7872982a718aa2516123940671b7c5"
+  url "https://mirrors.tuna.tsinghua.edu.cn/gnu/gcc/gcc-6.2.0/gcc-7.3.0.tar.bz2"
+  mirror "http://ftp.tsukuba.wide.ad.jp/software/gcc/releases/gcc-7.3.0/gcc-7.3.0.tar.bz2"
+  sha256 "832ca6ae04636adbb430e865a1451adf6979ab44ca1c8374f61fba65645ce15c"
 
   depends_on 'gmp'
   depends_on 'libmpc'
@@ -14,10 +14,10 @@ class ArmElfGcc < Formula
   def install
     binutils = Formulary.factory 'arm-elf-binutils'
 
-    ENV['CC'] = '/usr/local/opt/gcc/bin/gcc-6'
-    ENV['CXX'] = '/usr/local/opt/gcc/bin/g++-6'
-    ENV['CPP'] = '/usr/local/opt/gcc/bin/cpp-6'
-    ENV['LD'] = '/usr/local/opt/gcc/bin/gcc-6'
+    ENV['CC'] = '/usr/local/opt/gcc/bin/gcc-7'
+    ENV['CXX'] = '/usr/local/opt/gcc/bin/g++-7'
+    ENV['CPP'] = '/usr/local/opt/gcc/bin/cpp-7'
+    ENV['LD'] = '/usr/local/opt/gcc/bin/gcc-7'
     ENV['PATH'] += ":#{binutils.prefix/"bin"}"
 
     mkdir 'build' do
