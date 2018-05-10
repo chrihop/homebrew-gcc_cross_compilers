@@ -2,9 +2,9 @@ require 'formula'
 
 class I386ElfGcc < Formula
   homepage 'http://gcc.gnu.org'
-  url "https://mirrors.tuna.tsinghua.edu.cn/gnu/gcc/gcc-7.3.0/gcc-7.3.0.tar.xz"
-  mirror "http://mirrors-usa.go-parts.com/gcc/releases/gcc-7.3.0/gcc-7.3.0.tar.xz"
-  sha256 "832ca6ae04636adbb430e865a1451adf6979ab44ca1c8374f61fba65645ce15c"
+  url "https://mirrors.tuna.tsinghua.edu.cn/gnu/gcc/gcc-8.1.0/gcc-8.1.0.tar.xz"
+  mirror "http://mirrors-usa.go-parts.com/gcc/releases/gcc-8.1.0/gcc-8.1.0.tar.xz"
+  sha256 "1d1866f992626e61349a1ccd0b8d5253816222cdc13390dcfaa74b093aa2b153"
 
   depends_on "gmp"
   depends_on "libmpc"
@@ -16,10 +16,10 @@ class I386ElfGcc < Formula
     binutils = Formulary.factory 'i386-elf-binutils'
 
 
-    ENV['CC'] = '/usr/local/opt/gcc/bin/gcc-7'
-    ENV['CXX'] = '/usr/local/opt/gcc/bin/g++-7'
-    ENV['CPP'] = '/usr/local/opt/gcc/bin/cpp-7'
-    ENV['LD'] = '/usr/local/opt/gcc/bin/gcc-7'
+    ENV['CC'] = '/usr/local/opt/gcc/bin/gcc-8'
+    ENV['CXX'] = '/usr/local/opt/gcc/bin/g++-8'
+    ENV['CPP'] = '/usr/local/opt/gcc/bin/cpp-8'
+    ENV['LD'] = '/usr/local/opt/gcc/bin/gcc-8'
     ENV['PATH'] += ":#{binutils.prefix/"bin"}"
 
     mkdir 'build' do
