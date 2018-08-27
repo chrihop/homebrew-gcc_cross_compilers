@@ -2,9 +2,9 @@ require 'formula'
 
 class I386ElfBinutils < Formula
   homepage 'http://gcc.gnu.org'
-  url 'https://mirrors.tuna.tsinghua.edu.cn/gnu/binutils/binutils-2.30.tar.xz'
-  mirror 'http://ftp.gnu.org/gnu/binutils/binutils-2.30.tar.xz'
-  sha256 '6e46b8aeae2f727a36f0bd9505e405768a72218f1796f0d09757d45209871ae6'
+  url 'https://mirrors.tuna.tsinghua.edu.cn/gnu/binutils/binutils-2.31.tar.xz'
+  mirror 'http://ftp.gnu.org/gnu/binutils/binutils-2.31.tar.xz'
+  sha256 '231036df7ef02049cdbff0681f4575e571f26ea8086cf70c2dcd3b6c0f4216bf'
 
   depends_on 'gcc' => :build
   def install

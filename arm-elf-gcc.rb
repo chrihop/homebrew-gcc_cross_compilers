@@ -2,9 +2,9 @@ require 'formula'
 
 class ArmElfGcc < Formula
   homepage 'http://gcc.gnu.org'
-  url "https://mirrors.tuna.tsinghua.edu.cn/gnu/gcc/gcc-8.1.0/gcc-8.1.0.tar.xz"
-  mirror "http://ftp.tsukuba.wide.ad.jp/software/gcc/releases/gcc-8.1.0/gcc-8.1.0.tar.xz"
-  sha256 "1d1866f992626e61349a1ccd0b8d5253816222cdc13390dcfaa74b093aa2b153"
+  url "https://mirrors.tuna.tsinghua.edu.cn/gnu/gcc/gcc-8.2.0/gcc-8.2.0.tar.xz"
+  mirror "http://mirrors-usa.go-parts.com/gcc/releases/gcc-8.2.0/gcc-8.2.0.tar.xz"
+  sha256 "196c3c04ba2613f893283977e6011b2345d1cd1af9abeac58e916b1aab3e0080"
 
   depends_on 'gmp'
   depends_on 'libmpc'
