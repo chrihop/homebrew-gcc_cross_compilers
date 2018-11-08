@@ -2,9 +2,9 @@ require 'formula'
 
 class I386ElfBinutils < Formula
   homepage 'http://gcc.gnu.org'
-  url 'https://mirrors.tuna.tsinghua.edu.cn/gnu/binutils/binutils-2.31.tar.xz'
-  mirror 'http://ftp.gnu.org/gnu/binutils/binutils-2.31.tar.xz'
-  sha256 '231036df7ef02049cdbff0681f4575e571f26ea8086cf70c2dcd3b6c0f4216bf'
+  url 'https://mirrors.tuna.tsinghua.edu.cn/gnu/binutils/binutils-2.31.1.tar.xz'
+  mirror 'http://ftp.gnu.org/gnu/binutils/binutils-2.31.1.tar.xz'
+  sha256 '5d20086ecf5752cc7d9134246e9588fa201740d540f7eb84d795b1f7a93bca86'
 
   depends_on 'gcc' => :build
   def install
@@ -14,9 +14,13 @@ class I386ElfBinutils < Formula
     ENV['LD'] = '/usr/local/opt/gcc/bin/gcc-8'
 
     mkdir 'build' do
-      system '../configure', '--disable-nls', '--target=i386-elf','--disable-werror',
-                             '--enable-gold=yes', '--enable-interwork', '--enable-multilib',
-                             "--prefix=#{prefix}"
+      system "../configure", "--prefix=#{prefix}",
+                             "--disable-nls", 
+                             "--target=i386-elf",
+                             "--disable-werror",
+                             "--enable-interwork",
+                             "--enable-multilib",
+                             "--enable-gold=yes"
       system 'make all'
       system 'make install'
     end
