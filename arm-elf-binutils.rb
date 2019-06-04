@@ -2,26 +2,20 @@ require 'formula'
 
 class ArmElfBinutils < Formula
   homepage 'http://gcc.gnu.org'
-  url 'https://mirrors.tuna.tsinghua.edu.cn/gnu/binutils/binutils-2.31.1.tar.xz'
-  sha256 '5d20086ecf5752cc7d9134246e9588fa201740d540f7eb84d795b1f7a93bca86'
+  url 'http://ftp.gnu.org/gnu/binutils/binutils-2.32.tar.xz'
+  sha256 '0ab6c55dd86a92ed561972ba15b9b70a8b9f75557f896446c82e8b36e473ee04'
 
   depends_on 'gcc' => :build
   def install
-    ENV['CC'] = '/usr/local/opt/gcc/bin/gcc-8'
-    ENV['CXX'] = '/usr/local/opt/gcc/bin/g++-8'
-    ENV['CPP'] = '/usr/local/opt/gcc/bin/cpp-8'
-    ENV['LD'] = '/usr/local/opt/gcc/bin/gcc-8'
-
     mkdir 'build' do
-      system "../configure", "--prefix=#{prefix}",
-                             "--disable-nls", 
-                             "--target=arm-elf-eabi",
-                             "--disable-werror",
-                             "--enable-interwork",
-                             "--enable-multilib",
-                             "--enable-gold=yes"
-     system 'make all'
-      system 'make install'
+    system "../configure", "--prefix=#{prefix}",
+                           "--disable-nls", 
+                           "--target=arm-elf-eabi",
+                           "--disable-werror",
+                           "--enable-interwork",
+                           "--enable-multilib"
+    system "make", "all", "-j"
+    system "make", "install"
     end
   end
 end
