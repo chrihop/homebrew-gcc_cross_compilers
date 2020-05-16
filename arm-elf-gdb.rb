@@ -2,8 +2,8 @@ require 'formula'
 
 class ArmElfGdb < Formula
   homepage 'http://gcc.gnu.org'
-  url 'http://ftp.gnu.org/gnu/gdb/gdb-8.3.tar.xz'
-  sha256 '802f7ee309dcc547d65a68d61ebd6526762d26c3051f52caebe2189ac1ffd72e'
+  url 'https://ftp.gnu.org/gnu/gdb/gdb-9.1.tar.xz'
+  sha256 '699e0ec832fdd2f21c8266171ea5bf44024bd05164fdf064e4d10cc4cf0d1737'
 
   depends_on 'arm-elf-binutils'
   depends_on 'arm-elf-gcc'

@@ -1,17 +1,18 @@
-require 'formula'
-
 class I686ElfBinutils < Formula
-  homepage 'https://www.gnu.org/software/binutils/'
-  url 'http://ftp.gnu.org/gnu/binutils/binutils-2.32.tar.xz'
-  sha256 '0ab6c55dd86a92ed561972ba15b9b70a8b9f75557f896446c82e8b36e473ee04'
+  homepage "https://www.gnu.org/software/binutils/"
+  url "https://ftp.gnu.org/gnu/binutils/binutils-2.34.tar.gz"
+  sha256 "53537d334820be13eeb8acb326d01c7c81418772d626715c7ae927a7d401cab3"
 
   depends_on 'gcc' => :build
-  def install
 
+  TARGET = "i686-elf"
+
+  def install
     mkdir 'build' do
-      system "../configure", "--prefix=#{prefix}",
+      system "../configure", "--target=#{TARGET}",
+                             "--enable-targets=all",
+                             "--prefix=#{prefix}",
                              "--disable-nls", 
-                             "--target=i686-elf",
                              "--disable-werror",
                              "--enable-interwork",
                              "--enable-multilib"
@@ -19,5 +20,4 @@ class I686ElfBinutils < Formula
       system "make", "install"
     end
   end
-
 end
